@@ -2,12 +2,17 @@
 
 module.exports = {
   name: 'ember-power-calendar-moment',
+  included(app) {
+    this._super.included(app);
+    app.import('vendor/ember-power-calendar-utils');
+  },
+
   treeForVendor(rawVendorTree) {
     let babelAddon = this.addons.find(addon => addon.name === 'ember-cli-babel');
 
     return babelAddon.transpileTree(rawVendorTree, {
       'ember-cli-babel': {
-        compileModules: false
+        compileModules: true
       }
     });
   }
