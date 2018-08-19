@@ -2,25 +2,14 @@
 
 module.exports = {
   name: 'ember-power-calendar-moment',
-  // included(app) {
-  //   this._super.included(app);
-  //   app.import('vendor/ember-power-calendar-utils/index.js');
-  // },
 
-  // treeForVendor(rawVendorTree) {
-  //   let babelAddon = this.addons.find(addon => addon.name === 'ember-cli-babel');
-
-  //   return babelAddon.transpileTree(rawVendorTree, {
-  //     'ember-cli-babel': {
-  //       compileModules: true
-  //     }
-  //   });
-  // }
+  /**
+   * This method tries to rename the import path of the addon from
+   * `ember-power-calendar-moment` to `ember-power-calendar-util`.
+   * This "agnostic" import path should make easy to swap this addon
+   * by another one that exposes the same API from the same import path.
+   */
   treeForAddon(tree) {
-    // intentionally not calling _super here
-    // so that can have our `import`'s be
-    // import { click, fillIn } from 'ember-native-dom-helpers';
-
     const Funnel = require('broccoli-funnel');
 
     let namespacedTree = new Funnel(tree, {
