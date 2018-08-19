@@ -1,6 +1,6 @@
 {
   "name": "ember-power-calendar-moment",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -20,6 +20,7 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
+    "broccoli-funnel": "^2.0.1",
     "ember-auto-import": "^1.2.10",
     "ember-cli-babel": "^6.6.0",
     "moment": "^2.22.0"
