@@ -16,4 +16,21 @@ module.exports = {
   //     }
   //   });
   // }
+  treeForAddon(tree) {
+    // intentionally not calling _super here
+    // so that can have our `import`'s be
+    // import { click, fillIn } from 'ember-native-dom-helpers';
+
+    const Funnel = require('broccoli-funnel');
+
+    let namespacedTree = new Funnel(tree, {
+      srcDir: '/',
+      destDir: `/ember-power-calendar-utils`,
+      annotation: `Addon#treeForVendor (${this.name})`
+    });
+
+    return this.preprocessJs(namespacedTree, '/', 'ember-power-calendar-utils', {
+      registry: this.registry
+    });
+  }
 };
