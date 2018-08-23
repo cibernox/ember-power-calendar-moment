@@ -13,7 +13,7 @@
 {{#power-calendar-range
   center=someDate
   selected=selectedRange
-  minRange=3
+  minRange="1w"
   onSelect=(action (mut selectedRange) value="moment")
   onCenterChange=(action (mut someDate) value="moment") as |cal|
 }}

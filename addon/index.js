@@ -121,7 +121,10 @@ export function normalizeCalendarValue(value) {
 }
 
 export function normalizeDuration(value) {
-  if (value === null || moment.isDuration(value)) {
+  if (value === null) {
+    return null;
+  }
+  if (moment.isDuration(value)) {
     return value.asMilliseconds();
   }
   if (typeof value === "number") {
