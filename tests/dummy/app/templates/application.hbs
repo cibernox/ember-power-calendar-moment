@@ -9,3 +9,24 @@
   {{cal.nav}}
   {{cal.days}}
 {{/power-calendar}}
+
+{{#power-calendar-range
+  center=someDate
+  selected=selectedRange
+  minRange=3
+  onSelect=(action (mut selectedRange) value="moment")
+  onCenterChange=(action (mut someDate) value="moment") as |cal|
+}}
+  {{cal.nav}}
+  {{cal.days}}
+{{/power-calendar-range}}
+
+{{#power-calendar-multiple
+  center=someDate
+  selected=selectedMultiple
+  onSelect=(action (mut selectedMultiple) value="moment")
+  onCenterChange=(action (mut someDate) value="moment") as |cal|
+}}
+  {{cal.nav}}
+  {{cal.days}}
+{{/power-calendar-multiple}}
