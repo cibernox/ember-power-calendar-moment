@@ -1,6 +1,11 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{#power-calendar center=someDate as |cal|}}
+{{#power-calendar
+  center=someDate
+  selected=selected
+  onSelect=(action (mut selected) value="date")
+  onCenterChange=(action (mut someDate) value="date") as |cal|
+}}
   {{cal.nav}}
   {{cal.days}}
 {{/power-calendar}}

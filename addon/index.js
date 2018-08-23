@@ -114,7 +114,10 @@ export function withLocale(locale, fn) {
 }
 
 export function normalizeCalendarValue(value) {
-  return { date: value.date, moment: value ? moment(value) : undefined };
+  if (value) {
+    return { date: value.date, moment: value.date ? moment(value.date) : undefined }
+  }
+  return { date: undefined, moment: undefined };
 }
 
 export function normalizeDuration(value) {
