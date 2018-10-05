@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "github:cibernox/ember-power-calendar-moment",
   "license": "MIT",
   "author": "",
   "directories": {
