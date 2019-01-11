@@ -140,3 +140,25 @@ export function normalizeDuration(value) {
 export function getDefaultLocale() {
   return moment.locale();
 }
+
+export function localeStartOfWeek(locale) {
+  let now = new Date();
+  let day = withLocale(locale, () => formatDate(startOf(now, 'week'), 'dddd'));
+  let idx = withLocale(locale, getWeekdays).indexOf(day);
+  return idx >= 0 ? idx : 0;
+}
+
+export function startOfWeek(day, startOfWeek) {
+  while (isoWeekday(day) % 7 !== startOfWeek) {
+    day = add(day, -1, "day");
+  }
+  return day;
+}
+
+export function endOfWeek(day, startOfWeek) {
+  let eow = (startOfWeek + 6) % 7;
+  while (isoWeekday(day) % 7 !== eow) {
+    day = add(day, 1, "day");
+  }
+  return day;
+}
