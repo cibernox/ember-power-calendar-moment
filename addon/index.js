@@ -70,6 +70,7 @@ export function normalizeDate(dateOrMoment) {
   if (
     dateOrMoment === undefined ||
     dateOrMoment === null ||
+    dateOrMoment === '' ||
     dateOrMoment instanceof Date
   ) {
     return dateOrMoment;
