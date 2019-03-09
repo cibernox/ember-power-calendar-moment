@@ -25,6 +25,10 @@ Installation
 ember install ember-power-calendar-moment
 ```
 
+This addon depends on `moment` package. If you use ember-auto-import, make sure that `moment` is
+in your `dependencies`.
+
+Alternatively, you can use shim package: `ember install ember-cli-moment-shim`
 
 Usage
 ------------------------------------------------------------------------------
