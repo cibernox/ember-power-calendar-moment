@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-power-calendar-moment',
+  name: require('./package').name,
 
   /**
    * This method tries to rename the import path of the addon from
@@ -18,8 +18,13 @@ module.exports = {
       annotation: `Addon#treeForVendor (${this.name})`
     });
 
-    return this.preprocessJs(namespacedTree, '/', 'ember-power-calendar-utils', {
-      registry: this.registry
-    });
+    return this.preprocessJs(
+      namespacedTree,
+      '/',
+      'ember-power-calendar-utils',
+      {
+        registry: this.registry
+      }
+    );
   }
 };
