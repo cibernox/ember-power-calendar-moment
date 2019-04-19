@@ -1,9 +1,10 @@
 {
   "name": "ember-power-calendar-moment",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-power-calendar-adapter"
   ],
   "repository": "github:cibernox/ember-power-calendar-moment",
   "license": "MIT",
