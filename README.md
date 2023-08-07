@@ -1,5 +1,4 @@
-ember-power-calendar-moment
-==============================================================================
+# ember-power-calendar-moment
 
 Date manipulation, formatting and parsin is too complex for ember-power-calendar to reinvent, so it
 has to rely on other well tested libraries for that.
@@ -11,24 +10,21 @@ You will want to install this addon if you already use moment.js in your applica
 moment.js is your preferred date manipulation library.
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
+* Ember.js v4.4 or above
+* Ember CLI v4.4 or above
+* Node.js v14 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-power-calendar-moment
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 **Don't use it.**
 
@@ -37,13 +33,11 @@ This library is meant to be used internally by `ember-power-calendar` only.
 The API can change in breaking ways based on the needs of Ember Power Calendar.
 
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
