@@ -12,9 +12,9 @@ moment.js is your preferred date manipulation library.
 
 ## Compatibility
 
-* Ember.js v4.4 or above
-* Ember CLI v4.4 or above
-* Node.js v14 or above
+* Ember.js v3.28 or above
+* Ember CLI v3.28 or above
+* Node.js v16 or above
 
 
 ## Installation
