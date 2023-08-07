@@ -15,7 +15,7 @@ module.exports = {
     let namespacedTree = new Funnel(tree, {
       srcDir: '/',
       destDir: `/ember-power-calendar-utils`,
-      annotation: `Addon#treeForVendor (${this.name})`
+      annotation: `Addon#treeForVendor (${this.name})`,
     });
 
     return this.preprocessJs(
@@ -23,8 +23,8 @@ module.exports = {
       '/',
       'ember-power-calendar-utils',
       {
-        registry: this.registry
-      }
+        registry: this.registry,
+      },
     );
-  }
+  },
 };
