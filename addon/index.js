@@ -1,9 +1,7 @@
-import moment from "moment";
+import moment from 'moment';
 
 export function add(date, quantity, unit) {
-  return moment(date)
-    .add(quantity, unit)
-    .toDate();
+  return moment(date).add(quantity, unit).toDate();
 }
 
 export function formatDate(date, format, locale = null) {
@@ -15,15 +13,11 @@ export function formatDate(date, format, locale = null) {
 }
 
 export function startOf(date, unit) {
-  return moment(date)
-    .startOf(unit)
-    .toDate();
+  return moment(date).startOf(unit).toDate();
 }
 
 export function endOf(date, unit) {
-  return moment(date)
-    .endOf(unit)
-    .toDate();
+  return moment(date).endOf(unit).toDate();
 }
 
 export function weekday(date) {
@@ -84,15 +78,15 @@ export function normalizeRangeActionValue(val) {
     date: val.date,
     moment: {
       start: val.date.start ? moment(val.date.start) : val.date.start,
-      end: val.date.end ? moment(val.date.end) : val.date.end
-    }
+      end: val.date.end ? moment(val.date.end) : val.date.end,
+    },
   };
 }
 
 export function normalizeMultipleActionValue(val) {
   return {
     date: val.date,
-    moment: val.date ? val.date.map(e => moment(e)) : val.date
+    moment: val.date ? val.date.map((e) => moment(e)) : val.date,
   };
 }
 
@@ -116,7 +110,10 @@ export function withLocale(locale, fn) {
 
 export function normalizeCalendarValue(value) {
   if (value) {
-    return { date: value.date, moment: value.date ? moment(value.date) : undefined }
+    return {
+      date: value.date,
+      moment: value.date ? moment(value.date) : undefined,
+    };
   }
   return { date: undefined, moment: undefined };
 }
@@ -128,12 +125,12 @@ export function normalizeDuration(value) {
   if (moment.isDuration(value)) {
     return value.asMilliseconds();
   }
-  if (typeof value === "number") {
+  if (typeof value === 'number') {
     return value;
   }
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     let [, quantity, units] = value.match(/(\d+)(.*)/);
-    units = units.trim() || "days";
+    units = units.trim() || 'days';
     return moment.duration(parseInt(quantity, 10), units).asMilliseconds();
   }
 }
@@ -151,7 +148,7 @@ export function localeStartOfWeek(locale) {
 
 export function startOfWeek(day, startOfWeek) {
   while (isoWeekday(day) % 7 !== startOfWeek) {
-    day = add(day, -1, "day");
+    day = add(day, -1, 'day');
   }
   return day;
 }
@@ -159,7 +156,7 @@ export function startOfWeek(day, startOfWeek) {
 export function endOfWeek(day, startOfWeek) {
   let eow = (startOfWeek + 6) % 7;
   while (isoWeekday(day) % 7 !== eow) {
-    day = add(day, 1, "day");
+    day = add(day, 1, 'day');
   }
   return day;
 }

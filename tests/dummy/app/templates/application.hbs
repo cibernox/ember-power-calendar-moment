@@ -5,8 +5,8 @@
 <PowerCalendar
   @center={{this.someDate}}
   @selected={{this.selected}}
-  @onSelect={{action (mut this.selected) value="date"}}
-  @onCenterChange={{action (mut this.someDate) value="date"}} as |calendar|
+  @onSelect={{this.onSelect}}
+  @onCenterChange={{this.onCenterChange}} as |calendar|
 >
   <calendar.Nav />
   <calendar.Days />
@@ -16,18 +16,19 @@
   @center={{this.someDate}}
   @selected={{this.selectedRange}}
   @minRange="1w"
-  @onSelect={{action (mut this.selectedRange) value="moment"}}
-  @onCenterChange={{action (mut this.someDate) value="moment"}} as |calendar|
+  @onSelect={{this.onSelectedRange}}
+  @onCenterChange={{this.onCenterChangeMultiple}} as |calendar|
 >
   <calendar.Nav />
   <calendar.Days />
 </PowerCalendarRange>
 
+
 <PowerCalendarMultiple
   @center={{this.someDate}}
   @selected={{this.selectedMultiple}}
-  @onSelect={{action (mut selectedMultiple) value="moment"}}
-  @onCenterChange={{action (mut someDate) value="moment"}} as |calendar|
+  @onSelect={{this.onSelectedMultiple}}
+  @onCenterChange={{this.onCenterChangeMultiple}} as |calendar|
 >
   <calendar.Nav />
   <calendar.Days />
