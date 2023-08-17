@@ -1,4 +1,20 @@
-import moment from 'moment';
+import {
+  dependencySatisfies,
+  macroCondition,
+  importSync,
+} from '@embroider/macros';
+
+const moment = (() => {
+  if (macroCondition(dependencySatisfies('moment-timezone', '*'))) {
+    return importSync('moment-timezone').default;
+  } else if (macroCondition(dependencySatisfies('moment', '*'))) {
+    return importSync('moment').default;
+  } else {
+    throw new Error(
+      `ember-power-calendar-moment was unable to detect either moment-timezone or moment. Please add one of those to your app.`,
+    );
+  }
+})();
 
 export function add(date, quantity, unit) {
   return moment(date).add(quantity, unit).toDate();
