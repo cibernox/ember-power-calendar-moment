@@ -51,7 +51,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^7.0.0",
-    "ember-power-calendar": "git+https://git@github.com/cibernox/ember-power-calendar.git#80b06b08dbbb07e3ab025f7d18bb2887e22faf76",
+    "ember-power-calendar": "git+https://git@github.com/cibernox/ember-power-calendar.git#3bcbf1e49d52c2764bac00647bd92f2a64b053c6",
     "ember-qunit": "^7.0.0",
     "ember-resolver": "^11.0.0",
     "ember-source": "~4.12.0",
