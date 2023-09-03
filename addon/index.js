@@ -16,6 +16,34 @@ const moment = (() => {
   }
 })();
 
+export default {
+  add,
+  formatDate,
+  startOf,
+  endOf,
+  weekday,
+  isoWeekday,
+  getWeekdaysShort,
+  getWeekdaysMin,
+  getWeekdays,
+  isAfter,
+  isBefore,
+  isSame,
+  isBetween,
+  diff,
+  normalizeDate,
+  normalizeRangeActionValue,
+  normalizeMultipleActionValue,
+  normalizeCalendarDay,
+  withLocale,
+  normalizeCalendarValue,
+  normalizeDuration,
+  getDefaultLocale,
+  localeStartOfWeek,
+  startOfWeek,
+  endOfWeek,
+}
+
 export function add(date, quantity, unit) {
   return moment(date).add(quantity, unit).toDate();
 }
