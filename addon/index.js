@@ -42,7 +42,7 @@ export default {
   localeStartOfWeek,
   startOfWeek,
   endOfWeek,
-}
+};
 
 export function add(date, quantity, unit) {
   return moment(date).add(quantity, unit).toDate();
