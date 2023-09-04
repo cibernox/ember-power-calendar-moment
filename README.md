@@ -23,6 +23,14 @@ moment.js is your preferred date manipulation library.
 ember install ember-power-calendar-moment
 ```
 
+Add the following lines into you `app/app.js` to register this meta addon to `ember-power-calendar`
+```
+import { registerDateLibrary } from 'ember-power-calendar';
+import DateUtils from 'ember-power-calendar-moment';
+
+registerDateLibrary(DateUtils);
+```
+
 
 ## Usage
 
