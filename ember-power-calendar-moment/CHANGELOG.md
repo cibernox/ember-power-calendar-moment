@@ -1,5 +1,14 @@
 
 
+
+## v0.5.1 (2024-01-22)
+
+#### :bug: Bug Fix
+* [#59](https://github.com/cibernox/ember-power-calendar-moment/pull/59) Fix calendar day numbering issue with timezone ([@hexadecy](https://github.com/hexadecy))
+
+#### Committers: 1
+- Michel Couillard ([@hexadecy](https://github.com/hexadecy))
+
 ## v0.5.0 (2024-01-03)
 
 #### :boom: Breaking Change
