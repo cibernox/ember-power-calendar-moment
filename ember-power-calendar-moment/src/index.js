@@ -136,6 +136,7 @@ export function normalizeMultipleActionValue(val) {
 
 export function normalizeCalendarDay(day) {
   day.moment = moment(day.date);
+  day.number = moment(day.date).date();
   return day;
 }
 
