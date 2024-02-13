@@ -1,6 +1,15 @@
 
 
 
+
+## v0.6.0 (2024-02-13)
+
+#### :rocket: Enhancement
+* [#60](https://github.com/cibernox/ember-power-calendar-moment/pull/60) Convert addon to typescript ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.5.1 (2024-01-22)
 
 #### :bug: Bug Fix
