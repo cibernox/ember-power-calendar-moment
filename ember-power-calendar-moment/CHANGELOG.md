@@ -2,6 +2,15 @@
 
 
 
+
+## v0.6.1 (2024-02-13)
+
+#### :bug: Bug Fix
+* [#61](https://github.com/cibernox/ember-power-calendar-moment/pull/61) Add `ember-power-calendar` to peerDependencies ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.6.0 (2024-02-13)
 
 #### :rocket: Enhancement
