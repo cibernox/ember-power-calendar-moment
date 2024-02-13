@@ -96,6 +96,7 @@
     "main": "addon-main.cjs"
   },
   "peerDependencies": {
+    "ember-power-calendar": "*",
     "moment": "^2.30.1",
     "moment-timezone": "^0.5.44"
   },
