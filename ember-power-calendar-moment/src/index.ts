@@ -53,6 +53,7 @@ export default {
   localeStartOfWeek,
   startOfWeek,
   endOfWeek,
+  isCurrentMonth,
 };
 
 export function add(date: Date, quantity: number, unit: string): Date {
@@ -244,4 +245,8 @@ export function endOfWeek(day: Date, startOfWeek: number): Date {
     day = add(day, 1, 'day');
   }
   return day;
+}
+
+export function isCurrentMonth(date: Date): boolean {
+  return moment(date).month() === moment().month();
 }
