@@ -53,7 +53,6 @@ export default {
   localeStartOfWeek,
   startOfWeek,
   endOfWeek,
-  isCurrentMonth,
 };
 
 export function add(date: Date, quantity: number, unit: string): Date {
