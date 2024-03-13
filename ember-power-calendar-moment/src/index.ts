@@ -172,6 +172,7 @@ export function normalizeMultipleActionValue(val: {
 export function normalizeCalendarDay(day: PowerCalendarDay): PowerCalendarDay {
   day.moment = moment(day.date);
   day.number = moment(day.date).date();
+  day.isCurrentMonth = moment(day.date).month() === moment().month();
   return day;
 }
 
@@ -245,8 +246,4 @@ export function endOfWeek(day: Date, startOfWeek: number): Date {
     day = add(day, 1, 'day');
   }
   return day;
-}
-
-export function isCurrentMonth(date: Date): boolean {
-  return moment(date).month() === moment().month();
 }
