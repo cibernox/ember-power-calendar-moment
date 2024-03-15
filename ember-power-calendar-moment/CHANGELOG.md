@@ -4,6 +4,15 @@
 
 
 
+
+## v1.0.2 (2024-03-15)
+
+#### :bug: Bug Fix
+* [#64](https://github.com/cibernox/ember-power-calendar-moment/pull/64) Revert "feat: test currentMonth through dateLibrary" ([@eltonvus](https://github.com/eltonvus))
+
+#### Committers: 1
+- Elton ([@eltonvus](https://github.com/eltonvus))
+
 ## v1.0.1 (2024-03-14)
 
 #### :bug: Bug Fix
