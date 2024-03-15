@@ -171,7 +171,6 @@ export function normalizeMultipleActionValue(val: {
 export function normalizeCalendarDay(day: PowerCalendarDay): PowerCalendarDay {
   day.moment = moment(day.date);
   day.number = moment(day.date).date();
-  day.isCurrentMonth = moment(day.date).month() === moment().month();
   return day;
 }
 
