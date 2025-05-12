@@ -5,6 +5,18 @@
 
 
 
+
+## v1.0.3 (2025-05-12)
+
+#### :bug: Bug Fix
+* [#67](https://github.com/cibernox/ember-power-calendar-moment/pull/67) Remove unnecessary decorator-transforms dependency & update all dependencies ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* [#67](https://github.com/cibernox/ember-power-calendar-moment/pull/67) Remove unnecessary decorator-transforms dependency & update all dependencies ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.2 (2024-03-15)
 
 #### :bug: Bug Fix
