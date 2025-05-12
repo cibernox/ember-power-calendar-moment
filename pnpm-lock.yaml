@@ -14726,7 +14726,7 @@ snapshots:
       ky: 1.8.1
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
-      semver: 7.7.1
+      semver: 7.6.3
 
   package-json@6.5.0:
     dependencies:
@@ -16451,7 +16451,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.7.1
+      semver: 7.6.3
       xdg-basedir: 5.1.0
 
   uri-js@4.4.1:
