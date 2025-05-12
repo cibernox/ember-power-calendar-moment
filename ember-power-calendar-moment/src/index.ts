@@ -9,7 +9,7 @@ import type {
   NormalizeRangeActionValue,
   PowerCalendarDay,
 } from 'ember-power-calendar/utils';
-import * as momentNs from 'moment';
+import type * as momentNs from 'moment';
 import type { DurationInputArg2, unitOfTime } from 'moment';
 
 const moment: typeof momentNs = (() => {
