@@ -8,31 +8,30 @@ on:
   pull_request: {}
 
 concurrency:
-   group: ci-${{ github.head_ref || github.ref }}
-   cancel-in-progress: true
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 10
+
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          version: 8
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
+          node-version: 20.x
           cache: pnpm
 
       - name: 'Install dependencies'
         run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm i -f # re-sync injected deps
 
       - name: Lint
-        run: pnpm --filter ember-power-calendar lint
+        run: pnpm --filter ember-power-calendar-moment lint
 
   test:
     name: "Tests"
@@ -40,21 +39,21 @@ jobs:
     needs: lint
 
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 8
-          
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 20.x
           cache: pnpm
-          
+
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-        
+
+      - run: pnpm build
+      - run: pnpm i -f # re-sync injected deps
+
       - name: Run Tests
         run: pnpm --filter test-app test:ember
 
@@ -64,20 +63,18 @@ jobs:
     needs: lint
 
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          version: 8
-          
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
+          node-version: 20.x
           cache: pnpm
-          
+
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-        
+      - run: pnpm build
+      - run: pnpm i -f # re-sync injected deps
+
       - name: Run Tests
         run: pnpm --filter test-app test:ember
 
@@ -96,6 +93,9 @@ jobs:
           - ember-lts-4.8
           - ember-lts-4.12
           - ember-lts-5.4
+          - ember-lts-5.8
+          - ember-lts-5.12
+          - ember-lts-6.4
           - ember-release
           - ember-beta
           - ember-canary
@@ -103,21 +103,20 @@ jobs:
           - embroider-optimized
 
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 8
-          
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 20.x
           cache: pnpm
-          
+
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-        
+      - run: pnpm build
+      - run: pnpm i -f # re-sync injected deps
+
       - name: Run Tests
         env:
           EMBER_TRY_SCENARIO: ${{ matrix.try-scenario }}

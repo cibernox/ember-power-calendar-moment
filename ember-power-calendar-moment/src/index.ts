@@ -10,7 +10,7 @@ import type {
   PowerCalendarDay,
 } from 'ember-power-calendar/utils';
 import * as momentNs from 'moment';
-import type { Moment, DurationInputArg2, unitOfTime } from 'moment';
+import type { DurationInputArg2, unitOfTime } from 'moment';
 
 const moment: typeof momentNs = (() => {
   if (macroCondition(dependencySatisfies('moment-timezone', '*'))) {
@@ -140,7 +140,7 @@ export function normalizeDate(dateOrMoment?: unknown): Date | undefined {
   if (dateOrMoment instanceof Date) {
     return dateOrMoment;
   } else if (moment.isMoment(dateOrMoment)) {
-    return (dateOrMoment as Moment).toDate();
+    return dateOrMoment.toDate();
   }
 }
 
