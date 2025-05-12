@@ -98,8 +98,5 @@
   },
   "ember": {
     "edition": "octane"
-  },
-  "dependencies": {
-    "ember-power-calendar-moment": "workspace:*"
   }
 }
