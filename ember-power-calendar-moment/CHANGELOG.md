@@ -6,6 +6,15 @@
 
 
 
+
+## v1.0.4 (2025-05-12)
+
+#### :bug: Bug Fix
+* [#68](https://github.com/cibernox/ember-power-calendar-moment/pull/68) Remove incorrect `import 'moment';` ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.3 (2025-05-12)
 
 #### :bug: Bug Fix
