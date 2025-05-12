@@ -14,7 +14,8 @@
     "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefixColors auto",
     "start:addon": "pnpm run --filter ember-power-calendar-moment start --no-watch.clearScreen",
     "start:docs": "pnpm run --filter docs start --preserveWatchOutput",
-    "start:test-app": "pnpm run --filter test-app start"
+    "start:test-app": "pnpm run --filter test-app start",
+    "test:ember": "pnpm --filter '*' test:ember"
   },
   "packageManager": "pnpm@10.0.0",
   "devDependencies": {
