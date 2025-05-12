@@ -24,7 +24,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.5(prettier@3.5.3)
       release-it:
-        specifier: ^17.1.1
+        specifier: ^17.11.0
         version: 17.11.0(typescript@5.8.3)
 
   ember-power-calendar-moment:
@@ -14544,7 +14544,7 @@ snapshots:
       ky: 1.8.1
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
-      semver: 7.6.3
+      semver: 7.7.1
 
   package-json@6.5.0:
     dependencies:
@@ -16259,7 +16259,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.6.3
+      semver: 7.7.1
       xdg-basedir: 5.1.0
 
   uri-js@4.4.1:
